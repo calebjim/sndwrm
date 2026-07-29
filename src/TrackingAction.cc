@@ -85,12 +85,12 @@ void TrackingAction::PreUserTrackingAction(const G4Track* track)
   
   const G4VProcess* process   = track->GetCreatorProcess();
   G4String processName("null") ;
-
+  
   if (time/ms > 5.0) // Do not consider long time constant decays, like 41n! 10 msec is a few TPC drifts.
     {
       return;
     }
-
+  
   if (process)
     {
       processName = process->GetProcessName();

@@ -9,7 +9,7 @@
 /run/verbose 0
 /tracking/verbose 0
 
-/control/alias FLOOR {ARG1}
+/control/alias "FLOOR" {ARG1}
 
 /sndwrm/det/setHalfFidVol 7. 7. 31 m
 /sndwrm/det/setFloorShield {FLOOR} cm
@@ -86,7 +86,7 @@
 
 ##/control/execute /Users/chur558/sndwrm/macros/vis.mac
 ## /run/beamOn 5000000 # 15k: 10 cores, ~3 hours with 2/3 wall shielding and floor shielding.
-/run/beamOn 2100
+#/run/beamOn 2100
 
 
 

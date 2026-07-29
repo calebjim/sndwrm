@@ -110,10 +110,45 @@ void SteppingAction::UserSteppingAction(const G4Step* aStep)
 	{
 	  iVol = 4;
 	  //	  std::cout << "SteppingAction: Optical photon hit an Arapuca: " << eVname << std::endl;
+	  /*
+	  G4TouchableHandle touch = endPoint->GetTouchableHandle();
+
+	  // Build a unique identifier from the FULL navigation history
+	  G4String arapucaName("");
+	  G4int depth = touch->GetHistoryDepth();
+	  for (G4int d = 0; d <= depth; ++d) {
+	  	G4String vname = touch->GetVolume(d)->GetName();
+		if (vname.find("Arapuca") != std::string::npos) {
+			arapucaName = vname;
+			break;
+		}
+	  }
+	  if (!arapucaName.empty()) {
+	  	fEventAction->AddArapuca(arapucaKey);
+	  }
+	  */ 
 	  bool firstHit = fEventAction->RegisterArapucaHit(tID);
 	  
 	  if (firstHit)
  	    {
+		G4TouchableHandle touch = endPoint->GetTouchableHandle();
+
+          	G4String arapucaName("");
+          	G4int depth = touch->GetHistoryDepth();
+          	for (G4int d = 0; d <= depth; ++d) {
+                	G4String vname = touch->GetVolume(d)->GetName();
+                	if (vname.find("ArapucaRight") != std::string::npos ||
+			    vname.find("ArapucaLeft") != std::string::npos ||
+			    vname.find("ArapucaFront") != std::string::npos ||
+                            vname.find("ArapucaBack") != std::string::npos) {
+                        	arapucaName = vname;
+                        	break;
+                	}
+          	}
+          	if (!arapucaName.empty()) {
+                	fEventAction->AddArapuca(arapucaName);
+          	}
+
 		if ((lVolume->GetName()).find("Arapuca")==std::string::npos)
         	  {
             	      // photon came from LAr into the Arapuca -> external

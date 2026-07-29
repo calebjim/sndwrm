@@ -1,0 +1,465 @@
+#
+#
+/control/verbose 2
+/run/verbose 0
+/tracking/verbose 0
+#
+# set the target/detector geometry
+/sndwrm/det/setGDMLfile /rcfs/projects/dunelb/jime782/duneggd/python/duneggd/apexfd/duneapex.gdml
+/sndwrm/det/setHalfFidVol 7 7 32 m
+#/sndwrm/det/setHalfFidVol 651.486 672.371 2986.371 cm
+/random/setSeeds 1 11
+#
+/run/numberOfThreads 1
+/run/initialize
+#
+/process/list
+#
+# ---------- Common source geometry (applies to source 0) ----------
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+# ================================================================
+# Th-232 decay chain gamma lines
+# ================================================================
+# ---- 228Ac ----
+/gps/source/intensity 1.26
+/gps/energy 99.509 keV
+
+/gps/source/add 2.42
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 129.065 keV
+
+/gps/source/add 3.89
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 209.253 keV
+
+/gps/source/add 3.46
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 270.245 keV
+
+/gps/source/add 2.95
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 328.000 keV
+
+/gps/source/add 11.27
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 338.320 keV
+
+/gps/source/add 1.92
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 409.462 keV
+
+/gps/source/add 4.40
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 463.004 keV
+
+/gps/source/add 1.00
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 755.315 keV
+
+/gps/source/add 1.49
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 772.291 keV
+
+/gps/source/add 4.25
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 794.947 keV
+
+/gps/source/add 1.61
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 835.710 keV
+
+/gps/source/add 25.80
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 911.204 keV
+
+/gps/source/add 15.80
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 968.971 keV
+
+/gps/source/add 3.22
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 1588.190 keV
+
+/gps/source/add 1.51
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 1630.627 keV
+
+# ---- 212Bi ----
+/gps/source/add 1.09
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 39.858 keV
+
+/gps/source/add 6.58
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 727.330 keV
+
+/gps/source/add 1.10
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 785.370 keV
+
+/gps/source/add 1.49
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 1620.500 keV
+
+# ---- 212Pb ----
+/gps/source/add 43.30
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 238.632 keV
+
+/gps/source/add 3.28
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 300.087 keV
+
+# ---- 212Po ---- # Intensities scaled by branching ratio 0.6406
+/gps/source/add 1.281
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 583.191 keV
+
+/gps/source/add 1.666
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 2614.533 keV
+
+# ---- 224Ra ----
+/gps/source/add 4.10
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 240.986 keV
+
+# ---- 228Ra ----
+/gps/source/add 1.60
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 13.520 keV
+
+# ---- 228Th ----
+/gps/source/add 1.22
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 84.373 keV
+
+# ---- 208Tl ---- # Intensities scaled by branching ratio 0.3594
+/gps/source/add 8.122
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 510.770 keV
+
+/gps/source/add 30.369
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 583.191 keV
+
+/gps/source/add 0.650
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 763.130 keV
+
+/gps/source/add 4.464
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 860.564 keV
+
+/gps/source/add 35.581
+/gps/particle gamma
+/gps/pos/type Volume
+/gps/pos/shape Para
+/gps/pos/halfx 7 m
+/gps/pos/halfy 7 m
+/gps/pos/halfz 32 m
+/gps/pos/centre 0 0 0 m
+/gps/pos/confine Arapuca_place
+/gps/ang/type iso
+/gps/ene/type Mono
+/gps/energy 2614.533 keV
+
+/gps/source/list
+# Tell GPS to randomly pick a source each event (weighted by intensity)
+/gps/source/multiplevertex false
+#
+/analysis/setFileName /rcfs/projects/dunelb/jime782/sndwrm/build/Th232Gammas.root
+# Set histogram binning
+/analysis/h1/set 0 100 0. 2. MeV
+/analysis/h1/set 1 100 0. 2. MeV
+/analysis/h1/set 6 100 0. 2. MeV
+/analysis/ntuple/setActivation 0 true
+/analysis/ntuple/setActivation 1 true
+/analysis/ntuple/setActivation 2 true
+# tracks
+/analysis/ntuple/setActivation 3 false
+# stepping
+/analysis/ntuple/setActivation 4 false
+#
+/run/printProgress 5
+# ~5800 events corresponds to one supernova 10s time window
+/run/beamOn 1000

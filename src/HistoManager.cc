@@ -199,6 +199,7 @@ void HistoManager::Book( )
   analysis->CreateNtupleDColumn("Z");         //column 8
   analysis->CreateNtupleIColumn("InEl");         //column 9
   analysis->CreateNtupleDColumn("EgamCap");         //column 10
+  analysis->CreateNtupleIColumn("nArapucas");
   if (fEvtAct)
     analysis->CreateNtupleIColumn("nuclei",fEvtAct->GetNucleiVec());
   analysis->FinishNtuple();

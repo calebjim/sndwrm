@@ -40,6 +40,8 @@
 #include "PrimaryGeneratorAction.hh"
 #include <chrono>
 #include <random>
+#include <vector>
+#include <algorithm>
 
 #include "globals.hh"
 
@@ -61,6 +63,19 @@ class EventAction : public G4UserEventAction
     void AddEdepL(G4double );
     void AddEdepLhit(G4double  );
     void AddEdepQ(G4double );
+    void AddEdepLhitInt(G4double);
+    
+    void AddArapuca(const G4String& key) {
+    // check if eVname is already in the list
+    if (std::find(fArapucaList.begin(), fArapucaList.end(), key) == fArapucaList.end()) {
+        // not found → it's a new unique Arapuca
+        fArapucaList.push_back(key);   // add to the list
+        fNUniqueArapucas++;               // increment count
+        }
+    }
+    G4int GetNUniqueArapucas() const { return fNUniqueArapucas; }
+    void  ClearArapucas() { fArapucaList.clear(); fNUniqueArapucas = 0; }
+    
     void SetInelProc(bool inel) { if (inel) fInel = true;};
     bool GetInelProc() { return fInel;};
     void SetFiducial(bool fid) {fFiducial = fid;};              
@@ -72,10 +87,15 @@ class EventAction : public G4UserEventAction
     
     PrimaryGeneratorAction* GetPrimGenAct() {return fPGA;};
 
+    bool RegisterArapucaHit(G4int tid) {
+        return fCountedArapucaHits.insert(tid).second;
+    }
+    void ClearArapucaHits() { fCountedArapucaHits.clear(); }
+
   private:
     PrimaryGeneratorAction* fPGA;
     G4double fEdep1,   fEdep2;
-    G4double fEdepEvt, fEdepL, fEdepLhit, fEdepQ;
+    G4double fEdepEvt, fEdepL, fEdepLhit, fEdepQ, fEdepLhitInt;
     G4double fWeight1, fWeight2;
     G4double fTime0;
     bool fInel;
@@ -88,6 +108,10 @@ class EventAction : public G4UserEventAction
     std::vector<G4int> fNucleiVec;
     std::vector<G4double> fEGamCap;
     G4double fEGamCapSum;
+
+    std::vector<G4String> fArapucaList;
+    G4int fNUniqueArapucas = 0;
+    std::set<G4int> fCountedArapucaHits;
 };
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

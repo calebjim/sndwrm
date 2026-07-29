@@ -22,13 +22,16 @@
 /gps/pos/centre 0 0 0 m
 /gps/pos/confine Arapuca_place
 
-/gps/particle neutron
-/gps/energy 6.0 MeV
+/gps/particle gamma
+/gps/ene/type Arb
+/gps/hist/type arb
+/gps/hist/file /rcfs/projects/dunelb/jime782/sndwrm/build/gamma_hist.txt
+/gps/hist/inter Lin
 
 /gps/ang/type iso
 
 #
-/analysis/setFileName /rcfs/projects/dunelb/jime782/sndwrm/build/neutron6MeV_500.root
+/analysis/setFileName /rcfs/projects/dunelb/jime782/sndwrm/build/gammaHistTEST.root
 
 # Set histogram binning 
 
@@ -39,12 +42,12 @@
 /analysis/ntuple/setActivation 1 true
 /analysis/ntuple/setActivation 2 true
 # tracks
-/analysis/ntuple/setActivation 3 false
+/analysis/ntuple/setActivation 3 true
 # stepping
 /analysis/ntuple/setActivation 4 false
 
 #
-/run/printProgress 5
+/run/printProgress 1
 /random/setSeeds 1 11
 
-/run/beamOn 500
+/run/beamOn 1000

@@ -65,7 +65,7 @@
 
 #/analysis/setFileName neutron_shield
 #/analysis/setFileName neutron_plastic20cm
-/analysis/setFileName /Volumes/Transcend2TB/G4/data/liquid/tl208_Acrylic
+/analysis/setFileName tl208TEST.root #/Volumes/Transcend2TB/G4/data/liquid/tl208_Acrylic
 /analysis/h1/set 0 100 0. 2. MeV
 /analysis/h1/set 1 100 0. 2. MeV
 /analysis/h1/set 6 100 0. 2. MeV
@@ -76,7 +76,7 @@
 /analysis/ntuple/setActivation 4 true
 /run/printProgress 1000
 
-/control/execute /Users/chur558/rdecay02/macros/vis.mac
+#/control/execute /Users/chur558/rdecay02/macros/vis.mac
 
 # 0.8 Bq/kg leads to 10 Hz. 10 * piE7 sec is ~31 E7. Let's run 1/10th of one year.
 #/run/beamOn 31000000  # 10000
@@ -95,5 +95,5 @@
 
 ##/run/beamOn 27000000
 #/run/beamOn 270000
-/run/beamOn 20
+/run/beamOn 2
 

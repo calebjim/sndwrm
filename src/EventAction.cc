@@ -103,6 +103,7 @@ void EventAction::CapEGam(G4double E)
 void EventAction::BeginOfEventAction(const G4Event*)
 {
   ClearArapucaHits();
+  ClearArapucas();
 
   fEdep1 = fEdep2 = fWeight1 = fWeight2 = 0.;
   fEdepEvt = fEdepL = fEdepLhit = fEdepQ = fEdepLhitInt = 0.0;
@@ -213,6 +214,7 @@ void EventAction::EndOfEventAction(const G4Event* G4Evt)
    analysisManager->FillNtupleIColumn(id,9, int(fInel) );
    analysisManager->FillNtupleDColumn(id,10, fEGamCapSum);
    // This line knows to go call GetNucleiVec() to populate this row.
+   analysisManager->FillNtupleIColumn(id,11, fNUniqueArapucas);
    analysisManager->AddNtupleRow(id);
 
 
